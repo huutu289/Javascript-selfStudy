@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÍNH TIỀN BO</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap"
+    rel="stylesheet" />
+    
+</head>
+
+<body>
+    
+    <main id="container">
+        <h1>Tính tiền bo</h1>
+        <section>
+            <div class="bill">
+                <label for="">Hóa đơn</label>
+                <input type="number" placeholder="Hóa đơn của bạn" id="your-bill" oninput="update()">
+            </div>
+            <div>
+                <div class="space-between">
+                    <label for="tip-input">Bạn muốn bo bao nhiêu %/tổng hóa đơn?</label> <span id="tip-percent">0%</span>
+                </div>                
+                <input type="range" value="0" id="tip-input" class="range">
+            </div>
+            <div class="space-between">
+                <span>Số tiền bạn sẽ bo</span>
+                <span id="tip-value"> $ 0</span>
+            </div>
+            <hr>
+            <div class="total space-between">
+                <span>Tổng cộng</span>
+                <span id="total-with-tip">$0</span>
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <div class="space-between">
+                    <label for="split-input">Số người cần chia</label>
+                    <span id="split-value">1 người</span>
+                </div>
+                <input type="range" id="split-input" min="1" max="10" value="1" class="range">
+            </div>
+            <div class="space-between">
+                <span id="bill-each-title">Hóa đơn của mỗi người</span>
+                <span id="bill-each">$0</span>
+            </div>
+            <div class="space-between">
+                <span id="tip-each-title">Số tiền bo của mỗi người</span>
+                <span id="tip-each">$</span>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./script.js"></script>
+
+</html>
