@@ -23,17 +23,17 @@
         </svg>
 
     </div>
-    <div class="form">
-        <label for="id-input">Số Km hôm nay</label>
+    <form class="form">
+        <label for="entry">Số Km hôm nay</label>
         <br>
-        <input type="number" id="id-input" class="class-input" step="0.1">
+        <input type="number" id="entry" class="class-input" step="0.1" placeholder="Nhập số và nhấn enter">
         <br>
-        <button class="submit">Thêm vào</button>
-    </div>
+        <button type="submit" class="submit">Thêm vào</button>
+    </form>
     <hr>
-    <section class="entries-wrapper">
+    <section id="entriesWrapper" class="entries-wrapper">
         <p>Kéo dài 7 ngày</p>
-        <ul>
+        <ul id="entries">
             <li>-</li>
             <li>-</li>
             <li>-</li>
@@ -64,7 +64,7 @@
         </h3>
         <div class="progress-circle-wrapper">
             <div id="progress-circle">
-                <div id="progress-percent"> progress</div>
+                <div id="progress-percent"> Quá trình</div>
             </div>
         </div>
     </section>

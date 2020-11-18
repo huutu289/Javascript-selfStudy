@@ -15,6 +15,7 @@ body {
 .logo {
     text-align: center;
 }
+
 svg {
     max-width: 80%;
 }
@@ -26,8 +27,6 @@ svg {
 label {
     font-size: 1.8rem;
 }
-
-
 
 input[type='number'] {
     border: none;
@@ -52,52 +51,97 @@ input[type='number'] {
     border: 0;
     margin: 0.5rem 0 1rem 0;
 }
-.entries-wrapper{
+
+.entries-wrapper {
     padding: 1rem 0;
     font-size: 1.6rem;
 }
-.entries-wrapper p{
-    text-align: center;   
-    
-}
-.entries-wrapper ul{
-    display: flex;    
-    justify-content: space-around;
 
-    list-style: none;    
+.entries-wrapper p {
+    text-align: center;
+}
+
+.entries-wrapper ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
     margin: 0 0 30px 0;
     padding: 0;
 }
-.entries-wrapper ul li{
-    border: 1px solid #b1b0b0;    
-    padding: 1rem 1.5rem;    
-    text-align: center;    
-    line-height: 30px;
+
+.entries-wrapper ul li {
+    border: 1px solid #b1b0b0;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    line-height: 20px;
     color: white;
     overflow: hidden;
 }
-.data{
+
+.data {
     display: flex;
     flex-direction: column;
     font-size: 1.4rem;
 }
-.data > div{
+
+.data>div {
     display: flex;
     justify-content: space-between;
     background-color: #999;
     margin-bottom: 5px;
     padding: 10px;
 }
-.data > div span{
+
+.data>div span {
     font-size: 1.4rem;
 }
 
+.progress {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
-.progress{
+.progress-circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progress-circle {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 1.4rem;
+    /* background-color: lightblue; */
+    /* background: conic-gradient( #70db70 50%, #2d3740 50% 100%); */
 }
-.progress-total{}
-.progress-circle-wrapper{}
-.progress-circle{}
-.progress-percent{}
+
+#progress-percent {
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background-color: #1c262f;
+    line-height: 220px;
+}
+
+@media only screen and (max-width:600px) {
+    .entries-wrapper ul li {
+        padding: 0.5rem 1rem;
+        text-align: center;
+        line-height: 20px;
+    }
+    #progress-circle {
+        height: 150px;
+        width: 150px;
+    }
+    #progress-percent {
+        height: 130px;
+        width: 130px;
+        line-height: 150px;
+    }
+}

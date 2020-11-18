@@ -1,0 +1,69 @@
+:root{
+    --left-with:20%;
+}
+html{
+    font-size: 10px;
+    font-weight: 300;
+    color: #212560;
+}
+body{
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    border: 1px solid;
+    border-color: #1fb7bf;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    min-height: 600px;
+
+}
+.stats{
+    width: 30%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin-right: 20px;
+}
+ 
+
+.images-area{
+    background-color: lightblue;
+    width: 70%;
+    padding: 10px;
+    border-radius: 20px;
+
+}
+#message{
+    font-size: 2rem;
+    text-align: center;
+}
+#start-screen p, em{
+    font-size: 2rem;
+}
+button{
+    border: 1px solid #1fb7bf;
+    width: 100px;
+    height: 40px;
+    font-size: 2rem;
+    outline: none;
+    cursor: pointer;
+}
+#play-button{
+    margin-bottom: 20px;
+    
+}
+.image{
+    border-radius: 20px;
+    max-width: 100%;
+    height:100%;
+}
+#stats-content{
+    text-align: center;
+}
+
