@@ -1,13 +1,12 @@
-//cách lấy ra 1 elemnt từ DOM, id, class, tag, CSS selector, HTML collections,
+//5 cách lấy ra 1 elemnt từ DOM, id, class, tag, CSS selector, HTML collections,
 
 //1.get element by id
 console.log('-----------get element by id-----------');
 var headingNode = document.getElementById('heading');
 //nếu kq trả về null ==> or có 2 id trong HTML DOM or sai tên id
-console.log([headingNode]);
-console.log(
-    heading = {headingNode}
-    );
+console.log([headingNode]);//xuất ra dưới dạng mảng
+console.log(heading = { headingNode });//xuất ra dưới dạng object
+
 //2. get element by class
 console.log('-----------get element by class-----------');
 var headingNodes = document.getElementsByClassName('heading');// HTML collections
@@ -78,7 +77,7 @@ var hai = document.querySelector('input[type="checkbox"][value="1"]');
 var ba = document.querySelector('input[checked]:not([disabled])');
 var bon = document.querySelector('input[disabled]:not([checked])');
 var nam = document.querySelector('input[checked][disabled]');
-console.log(mot,hai,ba,bon,nam);
+console.log(mot, hai, ba, bon, nam);
 
 var listItems1 = document.querySelectorAll('.parent>li');
 var listItems2 = document.querySelectorAll('.parent>ul>li');
@@ -91,14 +90,14 @@ console.log(listItems1, listItems2, listItems3);
 console.log('----extention-----');
 var children1 = document.querySelector('.parent2');
 var children2 = document.querySelectorAll('.parent2');
-console.log('query selector: ',children1);
-console.log('query selector all: ',children2);
+console.log('query selector: ', children1);
+console.log('query selector all: ', children2);
 //get by tag name
 var pTag = children1.getElementsByTagName('p');
-console.log('tags: ',pTag);
+console.log('tags: ', pTag);
 //get by class name
 var classNames = children1.getElementsByClassName('parentList2');
-console.log('class Name: ',classNames);
+console.log('class Name: ', classNames);
 console.log(classNames[0].getElementsByTagName('li'));
 //get by id
 var byId = document.getElementById('lastItem');

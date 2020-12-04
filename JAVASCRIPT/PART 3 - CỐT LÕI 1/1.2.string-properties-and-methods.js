@@ -1,39 +1,49 @@
-// I. kiến thức cốt lõi
-// I.1. chuỗi
-// var string = 'Tu Cao la \"sieu nhan\", day la dau \\'
-// + 'cách xuống dòng '
-// +'và trang trí đẹp'; //layout code
-// console.log(string.length, string);
 
-// var fullName = 'Tu cao';
-// console.log(`Toi tên là: ${fullName}`); //keyword - temple string
 
-// I.2. làm việc với chuỗi - keyword = JS string methods
+//----------- II làm việc với chuỗi [keyword = JS string methods]---------
 var myString = 'Cao Huu Tu';
 var string2 = 'javascript';
-console.log('length property: ', myString, ", ", myString.length); //1-length property
-console.log(myString.indexOf('T', 8));//2 - indexOf(), 8 vị trí bắt đầu tìm kiếm
+//1.length property (tính cả khoảng trắng trước và sau chuỗi)
+console.log('length property: ', myString, ", ", myString.length); 
+
+//2.indexOf():  vị trí đầu tiên xuất hiện chuỗi con trong chuỗi mẹ (số 8 vị trí bắt đầu tìm kiếm trong chuỗi)
+console.log(myString.indexOf('T', 8));
+
+//3.lastIndexOf(): vị trí cuối cùng xuất hiện chữ cái u
 console.log('lastIndexOf(): ', myString.lastIndexOf('u'));
-console.log('Search method: ', myString.search('T')); //index and search phân biệt hoa thường
+
+//4. search(): vị trí đầu tiên xuất hiện chuỗi con trong chuỗi mẹ
+console.log('Search method: ', myString.search('T')); 
+
+//5. slice(): cắt 1 chuỗi con từ chuỗi mẹ
 console.log('Cut string: ', myString.slice(-2));
 console.log('Cut string: ', myString.slice(4, 7));
 console.log('Cut string: ', myString.slice(0));
 console.log('Cut string: ', myString.slice(-3, -1));
 
+//6. thay thế 
 console.log('Replace string: ', myString.replace(/Cao/g, 'Phan')); // [/Cao/g:] biểu thức chính quy
+
+//7. in hoa và in thường chuỗi
 console.log('upper case: ', myString.toUpperCase());
 console.log('lower case: ', myString.toLowerCase());
 
+//8.trim(): bỏ khoảng trống trước và sau chuỗi
 console.log('Trim: ', myString.trim());
 console.log('check length of string after trim(): ', myString.length);
+
+//9.split(): tách chuỗi
 console.log('split method: ', myString.split(' '));
 console.log('split method: ', string2.split(''));
 
+//10.charAt():  Returns the character at the specified index.
 console.log('Chart at: ', typeof string2.charAt(10));
+
+//11. lấy ký tự trong chuỗi theo index
 console.log('get string by index: ', string2[1]);
 console.log('get string by index: ', string2[10]);
 
-
+//bài tập
 function run(statusText) {
     var result;
     if (typeof statusText === 'string' && statusText.length >= 1) {
