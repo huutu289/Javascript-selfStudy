@@ -1,0 +1,78 @@
+html {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 2rem;
+}
+#uploader{
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+main {
+    background-color: rgb(39, 39, 39);
+    flex: 3;
+}
+
+.input-wrapper {
+    padding: 20px 5px;
+    font-size: 1.6rem;
+}
+
+button {
+    border-bottom: 1px solid white;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.effects>button {
+    text-align: left;
+}
+
+button:hover {
+    background-color: rgb(36, 35, 35);
+}
+
+.controls {
+    background-color: #333;
+    display: flex;
+}
+
+.controls>button {
+    border: none;
+    flex: 1;
+    padding: 15px 0;
+}
+
+aside {
+    flex: 1;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+}
+
+.effects {
+    display: flex;
+    flex-direction: column;
+}
+canvas{
+    width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+    body {
+        flex-direction: row;
+    }
+}

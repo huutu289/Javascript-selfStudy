@@ -81,7 +81,7 @@ const images = [
     },
 ]
 let currentImageValue = 0, displayNumber = 0, score = 0, totalAvailable = images.length, chosen = false;
-const timeDelay = 3000;
+const timeDelay = 5000;
 
 document.getElementById('stats-content').style.visibility = 'hidden';
 document.getElementById('current-score').innerHTML = score;
