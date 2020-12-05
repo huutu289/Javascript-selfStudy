@@ -1,10 +1,26 @@
-var languages = ['js','php','C++',];
-var languages2 = ['java'];
+//cách tạo mảng
+//cách 1
+var languages = ['js',
+    'php',
+    'C++',
+];
 
+//Array có thể chứa bất kỳ kiểu dữ liệu gì trong js, number,string,boolean, array, object, ,...
+const dataTypeOfArray = ['java',[], {}, true, false, null, undefined, '', 20, function(){}, ];
+console.log(dataTypeOfArray);
+//cách 2
+const array2 = new Array('java',[], {}, true, false, null, undefined, '', 20, function(){},);
+//type of an array is an object
+console.log('kiểu dữ liệu của Array: ',typeof array2);
+//cách kiểm tra biến có phải array không? Array.isArray()
+console.log('checking an variable is an array: ',Array.isArray(array2));
+console.log('check an object Array.isArray(): ',Array.isArray({}));
+
+var languages2 = ['C#', 'Ruby']
 //1. toString()
 console.log('---------toString()------------');
 console.log(languages.toString());
-//2. join()
+//2. join(): tách các phần tử của mảng
 console.log('---------join()------------');
 console.log(languages.join());
 console.log(languages.join(' '));//cách  nhau bởi khoảng trắng (space)
@@ -21,7 +37,7 @@ console.log('---------push()------------');
 console.log(languages2.push('Ruby'));//appends 1 element to the last of array
 console.log(languages2.push('css', 'html'));//appends 2 elements
 console.log(languages2);
-//shift ~ add to the first of array
+//shift ~ remove to the first of array, nếu mảng rổng--> trả về undefined
 console.log('---------shift()------------');
 console.log(languages2.shift());
 console.log(languages2);
@@ -33,7 +49,7 @@ console.log(unShift);
 console.log(unShift.unshift('-2', '-1'));
 console.log(unShift);
 
-//splice() chèn, xóa [slice() khác splice()]
+//splice() chèn, xóa [slice() # splice()]
 console.log('-------splice()------------');
 var splice = [1, 2, 3, 5];
 // console.log('splice delete',splice.splice(1,1));
@@ -59,15 +75,16 @@ console.log(slice.slice(0));//copy all elements of array
 console.log(slice.slice(-3, -1));
 
 //bài tập
-function run(anArray) {
+function run3(anArray) {
 
     var count = anArray.length;
+    console.log(count);
     if (count < 3) {
         anArray.shift();
     }
     else {
-        anArray.pop();
-        anArray.pop();
+        console.log('ádf');
+        anArray.splice(count-2, 2);
     }
 
     return anArray;
@@ -82,13 +99,16 @@ function run1(animals) {
     else if (count === 1) {
         animals.unshift('Elephant');
     }
-    else if(count > 2) {
-       
-        console.log(animals.splice(1,1,'Monkey', 'Tiger'));//slice # splice
+    else if (count > 2) {
+
+        // console.log(animals.splice(1, 1, 'Monkey', 'Tiger'));//slice # splice
     }
     return animals;
 }
-var runArray = [];
-var test = run1(runArray);
+var run1Array = [1,2,2,3,3,33,3,3];
+var animals = [];
+var test = run3(run1Array);
 console.log(test);
+console.log(run1(animals));
+
 
