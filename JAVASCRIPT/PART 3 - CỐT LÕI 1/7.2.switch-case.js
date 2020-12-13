@@ -1,3 +1,5 @@
+//nếu biết trước giá trị của biên nằm trong 1 khoảng nào đó  0...9, month: 0.30 dùng switch case
+//nhưng ít hơn 3 case thì nên dùng if else: code dễ nhìn hơn
 var day = new Date().getDay();
 switch(day)//sử dụng so sánh tuyệt đối ====
 {
@@ -48,7 +50,7 @@ switch(weekend)
     case 6:
         console.log('at the weekend');
         break;
-    case 3:
+    case 3://nếu case = 3, đi xuống 4,5 vì không có từ khóa break
     case 4:
     case 5:
         console.log('soon at the weekend');

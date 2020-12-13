@@ -38,14 +38,14 @@ var courses = [
 courses.forEach(function (course, index) {
     console.log(index, course.name);
 });
-//every() điều kiện đúng mới duyệt tiếp, ngược lại thoát
+//every() điều kiện đúng mới duyệt tiếp, ngược lại thoát: trả về boolean
 const t = courses.every(function (course, index) {
     console.log(index);
     return course.coin !== 0
 
 });
 console.log(t);
-//some()
+//some(): trả về boolean
 console.log('--array.some()---');
 var array2 = courses.some(function (course, index) {
     console.log(index);
@@ -68,7 +68,11 @@ var array2 = courses.filter(function (course, index) {
     return course.name === 'HTML'
 });
 console.log(array2);
-//map()
+//map(): cách 1: định nghĩa hàm trực tiếp 
+/*
+- nếu không truyền đối số cho map() thì map sẽ gọi undefined() -->lỗi 
+- ứng dụng trong thực tế: render ra view từ mảng (trả về từ backend)
+*/
 console.log('--array.map()---');
 var array2 = courses.map(function (course, index) {
     course.id = course.id;
@@ -79,7 +83,7 @@ var array2 = courses.map(function (course, index) {
 
 });
 console.log(array2.join(''));
-//map(). định nghĩa hàm courseHandler bên ngoài
+//map(): cách 2:  định nghĩa hàm courseHandler bên ngoài
 function courseHandler(course) {
     return course.name;
 }
@@ -182,6 +186,13 @@ var result = findEqualValues(array1, array2);
 console.log(result);
 
 //reduce()
+/*lần chạy trước return kq gì thì lần tiếp theo nhận được đúng kết quả đó
+- nếu không truyền giá trị khởi tạo: thì accumulator lấy giá trị đâu tiên của mảng làm giá trị khởi tạo
+- total = a[0] (giá trị đầu tiên của mảng)
+- currentValue = a[1] (or giá trị thứ 2 trong mảng)
+- nếu kiểu dữ liệu mong muốn trả về = kiểu dữ liệu của các giá trị trong mảng,
+    chúng ta có thể bỏ giá trị khởi tạo
+*/
 var getSum = function (accumulator, currentValue, currentIndex, OriginalArray) {
     console.table(currentIndex, accumulator);
     return accumulator + currentValue;

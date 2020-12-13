@@ -17,7 +17,9 @@ console.log('outerHTML',divInnerHTML.outerHTML);//string
 //set
 divInnerHTML.outerHTML = '<a href = "test">replaced div tag</a>';
 
-//sau khi nhận giá trị mới, biến divInnerHTML vẫn chứa giá trị cũ trong bộ nhớ, ko còn trong DOM
+//sau khi nhận giá trị mới, 
+// ko còn trong DOM
+//giá trị cũ trong bộ nhớ vì được lưu trên biến divInnerHTML
 console.log('trong bộ nhớ vẫn còn',divInnerHTML.textContent);
 
 //khi get sẽ trả về null div tag was removed from DOM

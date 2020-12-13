@@ -1,4 +1,4 @@
-//New object
+//--Định nghĩa 2 Classes
 function Tom(CatName) {
     this.name = CatName;
     this.stomach = [];
@@ -12,13 +12,20 @@ function Mouse(mouseName, mouseWeight, mouseColor) {
     this.weight = mouseWeight;
     this.color = mouseColor;
 }
+//--thêm thuộc tính vào Class bằng prototype
+Mouse.prototype.type = 'Chuột cống';
+
+//--thêm phương thức vào Class bằng prototype
 Mouse.prototype.sleep = function(){
     console.log('slepping....');
 }
 
+//--tạo mới 3 đối tượng, 1 mèo, 2 chuột
 var meoTom =  new Tom('meo tom');
 var mickey = new Mouse('mickey', 0.2, 'black');
 var jerrey = new Mouse('Jerry',0.5, 'white');
+
+
 meoTom.eat(mickey);
 console.log(meoTom);
 meoTom.eat(jerrey);
@@ -26,7 +33,11 @@ console.log(meoTom);
 console.log(Mouse.prototype);
 console.log(Mouse.prototype.constructor);
 console.log(Mouse.prototype.constructor === Mouse);
+
+//cả 2 loại chuột (mickey, jerry) đều có thể dùng phương thức sleep() vì
+// cùng trỏ tới 1 vùng nhớ do Class Mouse tạo ra
 mickey.sleep();
+jerrey.sleep();
 
 //vì sao không định nghĩa hàm bên trong class?
 //cách 1 dùng định nghĩa hàm bằng prototype

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.preventDefault-stopPropagatioin</title>
+</head>
+<style>
+    ul {
+        display: none;
+    }
+
+    input:focus~ul {
+        display: block;
+    }
+</style>
+
+<body>
+    <a href="https://fullstack.edu.vn/">f8</a>
+    <br>
+    <a href="https://www.google.com/">google</a>
+    <input type="text" placeholder="Tìm kiếm">
+    <ul>
+        <li>PHP</li>
+        <li>Javascript</li>
+        <li>C#</li>
+    </ul>
+
+    
+    <div class="stopPropagation">
+        DIV
+        <button >Click me</button>
+    </div>
+
+    <script src="./10.preventDefault-stopPropagatioin.js"></script>
+</body>
+
+</html>

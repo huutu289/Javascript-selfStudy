@@ -31,3 +31,30 @@ h1InnerText.textContent = `
 
 new heading
 `;
+var listItem1 = document.querySelector('.listItem1');
+
+// listItem1.innerHTML = '<li class ="li-1">  text 1 </li> <li>'
+// +' text 2 </li>';
+console.log(listItem1);
+console.log('inner html: ',listItem1.innerHTML);
+console.log('inner text: ',listItem1.innerText);//ko in ra displayy = none
+console.log('text content: ',listItem1.textContent);//in ra luoon display = none
+//để xem giá trị thực click chuột phải chọn edit as html sẽ thấy các ký hiệu được 
+//sinh ra bởi browser
+listItem1.innerText = '<li> 1 </li> <li> 2 </li>';//browser hiểu ra 1 text, ko phải thẻ
+
+
+var h1Element = document.querySelector('h1')
+//--thêm vào bằng template string: inner text
+//-có thêm thẻ br nếu có dấu enter
+h1Element.innerText = `
+template string
+`;
+console.log(h1Element.innerText);
+
+//--thêm vào bằng template string: text innerContent
+//- không có thẻ br đc thêm vào
+h1Element.textContent = `
+template string
+`;
+console.log(h1Element.textContent);

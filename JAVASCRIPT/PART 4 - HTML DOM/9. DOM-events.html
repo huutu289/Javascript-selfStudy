@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.DOM-events</title>
+</head>
+
+<body>
+    <h1>9.DOM-events</h1>
+    <div class="stopPoga">stop Propagation</div>
+    <!-- attribute event của javaScript -->
+    <button class="attributeEvent" onclick="console.log(Math.random(), this.innerText); console.log(this.innerText)">attribute Event</button>
+
+    <button class="clickMe">
+        click me
+    </button>
+    <div class="domEvent">
+        <h1>dom event</h1>
+        <h2></h2>
+        
+        <a href="#" name="answer"></a>
+        <a href="#" name="answer1"></a>
+    </div>
+    <ul class="testPrevent">
+        <li>ul 1</li>
+        <li>ul 2</li>
+        <li>ul 3</li>
+    </ul>
+    <form action="#">
+        <input type="text">
+        <input type="checkbox">
+        <select name="domEvent" id="domEvent">
+            <option value="1">option 1</option>
+            <option value="2"> option 2</option>
+            <option value="3"> option 3</option>
+        </select>
+    </form>
+    <script src="9.DOM-events.js"></script>
+</body>
+
+</html>

@@ -7,9 +7,12 @@
  */
 
 var elementNode = document.querySelector('.box');
+
 //-width and height of element, top, left
 console.log('height: ',elementNode.clientHeight, 'width: ',elementNode.clientWidth, 'top: ', elementNode.clientTop, elementNode.clientLeft);
 console.log([elementNode]);
+//-tên thẻ
+console.log('tên thẻ:',elementNode.tagName);
 //- draggable
 // console.log('dragable: '.elementNode.draggable);
 //-first child
@@ -25,39 +28,45 @@ console.log('thuộc tính của .box: ',attributesOfDiv);
 
 //2. childElement
 console.log('elements node of .box: ',elementNode.childElementCount);
-//- child nodes (3 types of nodes)
+//- child nodes (3 types of nodes): element node = 1, attribute node = 2, text node =3
 console.log('3 types of nodes: ',elementNode.childNodes);
 //3. base URI
 console.log('base URI: ', elementNode.baseURI);
-// - chuẩn tài liệu
+//4. chuẩn tài liệu
 console.log('chuẩn tài liệu, name space uri: ',elementNode.namespaceURI);
-// - next element sibbling
+//5. next element sibbling
 console.log('next element sibbling', elementNode.nextElementSibling);
-// next sibbling
+//6. next sibbling (có thể attribute node or text node)
 var nexSiblingNode = elementNode.nextSibling;
 console.log('next sibbling: ', nexSiblingNode);
-//- type node of text node
+//7.1. type node of text node =3
 console.log('type node of text node: ',nexSiblingNode.nodeType);
-//-type node of element node
+//7.2.type node of element node =1
 console.log('type  node of element node: ',elementNode.nodeType);
-//type node of attribute node
+//7.3.type node of attribute node = 2
 var attributeNode = elementNode.attributes;
 console.log([attributeNode]);
-//- owner document
+//8.owner document
 console.log('owner document: ',elementNode.ownerDocument);
 console.log(elementNode.ownerDocument === document);
-//- parent element
+//9.parent element
 console.log('parent element node: ',elementNode.parentElement);
-//parent node
+//10.parent node
 console.log('parent node: ',elementNode.parentNode);
-//scroll height
+//11.scroll height
 console.log('scroll height: ',elementNode.scrollHeight);
-//check spell
+//12.check spell
 console.log('spell check: ',elementNode.spellcheck);
-//style: liên quan đến CSS, dùng nhiều-->học kỹ
+//13.style: liên quan đến CSS, dùng nhiều-->học kỹ
 console.log('CSS style: ',[elementNode.style]);
-//tab index, đánh thứ tự
+//14.tab index, đánh thứ tự
 console.log('tab index: ',elementNode.tabIndex);
+//15. lấy giá trị của thuộc tính class
+console.log('giá trị của class', elementNode.className);
+//16. tên thẻ
+console.log('tên thẻ: ', elementNode.localName);
+
+
  console.log('text node: ',[elementNode]); 
 
  var lastDivElemnt = document.querySelector('div');
@@ -110,3 +119,32 @@ console.log('tab index: ',elementNode.tabIndex);
      if (node[i].nodeType == 1) h1Element = node[i];
  }
 console.log(textNode1, textNode2, h1Element);
+
+// Làm bài tập tại đây
+
+var childrenOfDiv = document.querySelector('div').childNodes;
+var textNode1, textNode2, h1Element;
+console.log(childrenOfDiv);
+for(var i =0;i<childrenOfDiv.length;i++)
+{
+    if(childrenOfDiv[i].nodeType ===1 )
+    {
+          
+        h1Element = childrenOfDiv[i];
+    }
+    else if(childrenOfDiv[i].nodeType ===3 && childrenOfDiv[i].textContent.trim()==='Text 1')
+    {
+        textNode1 = childrenOfDiv[i];
+    }
+    else if(childrenOfDiv[i].nodeType ===3 && childrenOfDiv[i].textContent.trim()==='Text 2')
+    {
+        textNode2 = childrenOfDiv[i];
+    }
+}
+console.log(textNode1, textNode2, h1Element.innerText.trim());
+var heading1 = document.querySelector('#heading');
+console.log(heading1);
+console.log('classList: ',heading1.classList);
+heading1.style.backgroundColor = 'red';
+heading1.style.fontSize = '2rem';
+console.log( 'class name',heading1.className);

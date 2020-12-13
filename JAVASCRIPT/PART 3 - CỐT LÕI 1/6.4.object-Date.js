@@ -1,14 +1,15 @@
-//dùng Date();
-//cách 1
+
+//nếu không có từ khóa new thí tạo ra kiểu string
 var dateFunction = Date();
 console.log('result of Date function: -', dateFunction);
+//không thể truy xuất thuộc tính và phương thức của Date constructor qua dateFunction
 
-//cách 2
+//--tạo ra object từ Date constructor
 var dateObject = new Date();
 console.log('object date: -',dateObject);
-/*- có thể truy xuất các phương thức và thuộc tính của Date
-    -các phương thức hay dùng
-*/
+
+//-- có thể truy xuất các phương thức và thuộc tính của Date
+//-các phương thức hay dùng
 var year = dateObject.getFullYear();
 var month = dateObject.getMonth()+1;
 var day = dateObject.getDate();

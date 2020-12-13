@@ -1,28 +1,34 @@
-var btn = document.querySelector('#btnEventListener');
+var btn = document.querySelector('#btnDomEvent');
 
 /*
     -DOM event
     + đơn giản
     + không muốn gỡ bỏ event
 */
-btn.onclick = function (e){
+btn.onclick = function (e) {
     console.log('---DOM Event---');
 }
+//-hủy bỏ lắng nghe
+setTimeout(() => {
+    btn.onclick = function () { }
+}, 3000)
 
 /*
-    -Event listenner
-    + phước tạp hơn
-    + có thể muốn gỡ bỏ event (xử lý nhiều việc khi event xãy ra)
-*/
-function f1(){
+    - lợi ích khi dùng Event listenner
+        + phước tạp hơn
+        + có thể muốn gỡ bỏ event (xử lý nhiều việc khi event xãy ra)
+    */
+
+var btnEventListener = document.querySelector('#btnEventListener');
+function f1() {
     console.log('Event Listener: viec 1');
 }
-function f2(){
+function f2() {
     console.log('Event Listener: viec 2');
 }
-btn.addEventListener('click',f1)
-btn.addEventListener('click',f2)
+btnEventListener.addEventListener('click', f1)
+btnEventListener.addEventListener('click', f2)
 
-setTimeout(function(){
-    btn.removeEventListener('click',f1)
-},3000);
+setTimeout(function () {
+    btnEventListener.removeEventListener('click', f1)
+}, 3000);

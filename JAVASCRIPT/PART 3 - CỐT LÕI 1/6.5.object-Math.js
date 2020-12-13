@@ -1,3 +1,4 @@
+//Math không phải là objec constructor nên không thể dùng new
 console.log(Math.PI);
 console.log(Math.round(1.5));
 console.log(Math.abs(4));// 4
