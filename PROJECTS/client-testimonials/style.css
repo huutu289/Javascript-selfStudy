@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    font-size: 16px;
+    
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../background-image-slider/imgs/contBcg-1.jpeg");
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.title{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    margin: 50px 0 20px 0;
+    font-weight: bold;
+}
+.title p:first-child{
+    color: #f15025;
+    font-size: 30px;
+}
+.title p:last-child{
+    font-size: 50px;
+    margin-top: 10px;
+}
+.customer{
+    width: 500px;
+    max-height: 330px;
+    border: 1px solid;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+}
+img{
+    border: 1px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.infor {
+    margin: 50px;
+    
+}
+p.infor-quote {
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+}
+.svg-inline--fa.fa-w-16 {
+    width: 1.5em;
+    color: #f15025;
+}
+p.infor-name {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.controls .left,.right{
+    color: #f15025;
+    font-size: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 5px;
+    width: 20px;
+    height: 40px;
+}
+.left{
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+}
+.right{
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+}
+.infor-stars{
+    color: #f15025;
+}

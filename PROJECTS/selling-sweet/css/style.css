@@ -1,0 +1,326 @@
+@import url('./fonts.css');
+:root {
+    --mainPink: #ef7998;
+    --mainYellow: rgb(249, 228, 148);
+    --mainWhite: #fff;
+    --mainBlack: #000;
+    --yellowTrans: rgba(249, 228, 148, 0.5);
+    --mainGrey: rgb(238, 238, 238);
+    
+    /* font */
+    --Kaushan: 'Kaushan', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+/* ---------globle classes-----------*/
+button{
+    font-family: var(--Kaushan);
+    font-size:1.5rem;    
+    cursor: pointer;
+    color: var(--mainBlack);
+    border: 2px solid var(--mainBlack);
+    text-transform: uppercase;
+    border-radius: 5px;    
+}
+button:hover{
+    background-color: var(--mainBlack);
+    color: var(--mainPink);
+}
+
+body {
+    font-family: var(--Kaushan);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+.header__logo{
+    cursor: pointer;
+}
+.header__nav{
+    width: 250px;
+}
+.header__list{
+    width: 100%;
+    display: flex;
+    list-style:none;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+.header__list-item{
+    font-size: 1.5rem;
+    color: var(--mainPink)
+}
+.header__list-item:hover{
+    color: var(--mainBlack)
+}
+.header__link{
+    text-decoration: none;
+}
+.contact__cart{
+    width: 400px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.header__cart{
+    border: 1px solid var(--mainBlack);
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header__cart:hover{
+    color: var(--mainWhite);
+    background-color: var(--mainPink);
+
+}
+
+/* -------------------------banner-------------------- */
+.banner{
+    height: 550px;    
+
+    background-image: linear-gradient(180deg, var(--yellowTrans), var(--yellowTrans)),url(../img/headerBcg.jpeg);
+    
+    background-repeat: no-repeat;
+    /* nếu không đưa height vào thì mặc định auto */
+    
+    background-size: 100% auto;    
+    background-position: center center;
+    /* dùng các keyword */
+    /* lấy cạnh dài của bức ảnh, không chấp nhận che khuất */
+    background-size: contain;
+    /* lấy cạnh dài của bức ảnh, chấp nhận che khuất ảnh */
+    background-size: cover;
+     
+    background-attachment: fixed;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+
+    
+}
+.banner__welcome span:first-child{
+    font-size: 3rem;
+    color: var(--mainWhite);
+    
+}
+.banner__welcome span:last-child{
+    font-size: 5rem;
+    color: var(--mainPink);
+    font-weight: 500;
+}
+.banner__explore>button{
+    font-family: var(--Kaushan);
+    font-size:1.5rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    color: var(--mainBlack);
+    border: 2px solid var(--mainBlack);
+    text-transform: uppercase;
+    border-radius: 5px;    
+}
+.banner__explore>button:hover{
+    background-color: var(--mainBlack);
+    color: var(--mainPink);
+}
+/* -------------------------./ banner-------------------- */
+
+/* -------------------------About us-------------------- */
+.about-us{
+    min-height: 400px;
+    background-color: var(--mainWhite);
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 8rem;
+    position: relative;
+}
+.about-us__left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.about-us__title span:first-child{
+    font-size: 2rem;
+}
+.about-us__title span:last-child{
+    font-size: 5rem;
+    color: var(--mainPink);
+}
+.about-us__content p{
+    font-size:1rem;
+    color: rgb(109, 108, 108);
+    margin-bottom: 2rem;
+}
+.about-us__explore>button{
+    padding: 0.2rem .5rem;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid;
+
+}
+.about-us__right{
+    margin-left: 10rem;
+    flex: 1;
+    background-image: url(../img/sweets-1.jpeg);
+    background-repeat: no-repeat;
+    background-size:contain;        
+    
+}
+.about-us__right::before{
+    /* bắt buộc */
+    content: 'About us';
+    /* phải có thuộc tính này để hiển thị đc */
+    display: block;
+    border: 2px solid;
+    width: 464px;
+    height: 348px;
+  
+}
+/* -------------------------./ about us-------------------- */
+
+/* -------------------------our store-------------------- */
+.our-store {
+    background-color: var(--mainGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title span:first-child {
+    font-size: 2.5rem;
+}
+
+.title span:last-child {
+    font-size: 5rem;
+    color: var(--mainPink);
+}
+
+.buttons>button {
+    font-family: var(--Kaushan);
+    font-size: 1rem;
+    padding: 0.4rem 0.4rem;
+    text-transform: uppercase;
+    margin: 1rem 0 1rem 3rem;
+    cursor: pointer;
+    color: var(--mainBlack);
+    border-color: var(--mainBlack);
+    border-radius: 5px;
+    outline: none;
+    border-width: 1px;
+    background-color: transparent;
+}
+
+.buttons>button:hover {
+    background-color: var(--mainBlack);
+    color: var(--mainPink);
+}
+.search{
+    width: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 2rem;
+    height: 3rem;
+   
+}
+.search .btn-search, .input-search {
+    font-family: var(--Kaushan);
+    padding: 0 0 0 1rem;
+    font-size: 1rem;        
+    height: 100%;
+    border: 0;
+}
+
+.search .btn-search {
+    background-color: var(--mainPink);    
+    
+    width: 4rem;
+}
+.search .input-search{
+    width: 20rem;
+}
+.items-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.items{
+    background-color: var(--mainWhite);
+    
+    
+}
+.items .link-img{
+    width: 300px;
+    height: 250px;
+    border: 1px solid #333;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+.items .link-img img{
+    width: 100%;
+    height: 100%;
+}
+.anim{
+    transform: scale(1.5);
+    animation: growth .5s linear;    
+
+}
+.anim-remove{
+    transform: scale(1);
+    animation: growth-remove .5s linear;  
+}
+.cart{
+   
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1rem;
+    color: var(--mainBlack);
+    background-color: var(--mainYellow);
+    padding: 1rem;
+    
+}
+
+.items .name-price{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+@keyframes growth{
+    from{
+    transform: scale(1);
+    
+    }
+    to {
+    
+        transform: scale(1.5);
+    }
+}
+@keyframes growth-remove{
+    from{
+    transform: scale(1.5);
+    
+    }
+    to {
+    
+        transform: scale(1);
+    }
+}
